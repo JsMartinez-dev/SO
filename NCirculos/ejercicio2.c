@@ -5,6 +5,10 @@
 #include <unistd.h>
 #include <signal.h>
 
+/*
+Este programa implementa un sistema de comunicación entre procesos utilizando señales UNIX (SIGUSR1),
+donde un proceso padre crea múltiples procesos hijo que se comunican formando un anillo circular de señales.
+*/
 
 int *pids;
 int cantidad;
