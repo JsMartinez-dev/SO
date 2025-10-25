@@ -6,10 +6,15 @@
 #include <signal.h>
 
 /*
+<<<<<<< HEAD:signal/NCirculos/ejercicio2.c
 Este programa implementa un sistema de comunicación entre procesos
 utilizando señales UNIX (SIGUSR1), donde un proceso padre crea
 múltiples procesos hijo que se comunican formando un anillo circular
 de señales.
+=======
+Este programa implementa un sistema de comunicación entre procesos utilizando señales UNIX (SIGUSR1),
+donde un proceso padre crea múltiples procesos hijo que se comunican formando un anillo circular de señales.
+>>>>>>> ccdad3302395b3aec360eaeafb99f4ffa5ff9727:NCirculos/ejercicio2.c
 */
 
 int *pids;
