@@ -1,0 +1,19 @@
+#include <stdio.h> 
+#include <string.h> 
+#include <stdlib.h> 
+#include <stddef.h>
+#include <sys/types.h> 
+#include <sys/wait.h> 
+#include <unistd.h>
+
+#include <stdio.h>  -> Agrega las funciones de entrada y salida printf(), scanf(), fopen(), fclose(), fgets().
+#include <string.h> -> Sirve para mainupal cadenas de texto strlen(), strcpy(), strcmp(), memcpy(), memset().
+#include <stdlib.h> -> Gestionar la memoria dinámica malloc() realloc() free() atoi()
+#include <stddef.h> -> tipos y macros estándar usados en otras librerías. size_t
+#include <sys/types.h> ->tipos de datos usados en el sistema operativo, pid_t, off_t,
+#include <sys/wait.h> -> Funcion para manejar procesos hijos , wait(NULL)
+#include <unistd.h>  -> Acceso directo a llamadas del sistema POSIX, fork() exec() getpid()
+
+
+
+
