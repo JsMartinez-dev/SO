@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 pid_t *pids;
-pid_t pidh,pidhh,pidhhh;
+pid_t pidh;
 
 void mostrar(char c){
     printf("%c-",c);
@@ -46,7 +46,7 @@ void handler_e(int sig){
 }
 void handler_f(int sig){
     mostrar('f');
-    kill(pidhh,SIGUSR1);    
+    kill(pidh,SIGUSR1);    
 }
 void handler_f_2(int sig){
     mostrar('f');
@@ -59,7 +59,7 @@ void handler_g(int sig){
 }
 void handler_h(int sig){
     mostrar('h');
-    kill(pidhhh,SIGUSR1);    
+    kill(pidh,SIGUSR1);    
 }
 void handler_h_2(int sig){
     mostrar('h');
@@ -92,6 +92,10 @@ int main(){
             signal(SIGUSR1,handler_b);
             signal(SIGUSR2,handler_b_2);
             pidh=fork();
+            if(pidh==-1){
+                perror("Error al crear procesos");
+                return 1;
+            }
             if (pidh==0) //e
             {
                 signal(SIGUSR1,handler_e);
@@ -109,15 +113,27 @@ int main(){
             signal(SIGUSR1,handler_c);    
             signal(SIGUSR2,handler_c_2);
             pidh=fork();
+            if(pidh==-1){
+                perror("Error al crear procesos");
+                return 1;
+            }
             if(pidh==0){ //f
                 signal(SIGUSR1,handler_f);    
                 signal(SIGUSR2,handler_f_2);    
-                pidhh=fork();
-                if(pidhh==0){ //h
+                pidh=fork();
+                if(pidh==-1){
+                    perror("Error al crear procesos");
+                    return 1;
+                }
+                if(pidh==0){ //h
                     signal(SIGUSR1,handler_h);    
                     signal(SIGUSR2,handler_h_2);    
-                    pidhhh=fork();
-                    if(pidhhh==0){//i
+                    pidh=fork();
+                    if(pidh==-1){
+                        perror("Error al crear procesos");
+                    return 1;
+                    }
+                    if(pidh==0){//i
                         signal(SIGUSR1,handler_i);    
                         pause();
                         exit(0);
@@ -175,7 +191,7 @@ int main(){
 
 
 
-
+    free(pids);
     return 0;
 }
 
