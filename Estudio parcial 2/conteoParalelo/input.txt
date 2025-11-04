@@ -1,0 +1,14 @@
+int main(){
+    float num = 12; //esto es un flotante
+    int num2 = 13; 
+    int suma = num2+1;
+    printf("suma es:"+suma);
+
+
+
+
+
+
+
+    return 0;
+}

@@ -1,0 +1,289 @@
+1-strlen()
+
+Descripción: Calcula la longitud de una cadena (sin contar el carácter nulo '\0').
+
+Prototipo:
+
+size_t strlen(const char *str);
+str: Puntero a la cadena de caracteres.
+
+------------------------------------------------------------------------------------------
+strcmp()
+
+Descripción: Compara dos cadenas.
+
+Prototipo:
+
+int strcmp(const char *str1, const char *str2);
+
+
+Parámetros:
+
+str1, str2: Cadenas a comparar.
+
+
+
+------------------------------------------------------------------------------------------
+
+strncmp()
+
+Descripción: Compara los primeros n caracteres de dos cadenas.
+
+Prototipo:
+
+int strncmp(const char *str1, const char *str2, size_t n);
+
+
+Parámetros:
+
+str1, str2: Cadenas a comparar.
+
+n: Número de caracteres a comparar.
+
+
+------------------------------------------------------------------------------------------
+strcpy()
+
+Descripción: Copia una cadena en otra.
+
+Prototipo:
+
+char *strcpy(char *dest, const char *src);
+
+
+Parámetros:
+
+dest: Cadena destino.
+
+src: Cadena fuente.
+
+Retorna:
+
+Puntero a dest.
+
+
+------------------------------------------------------------------------------------------
+
+strncpy()
+
+Descripción: Copia los primeros n caracteres de una cadena.
+
+Prototipo:
+
+char *strncpy(char *dest, const char *src, size_t n);
+
+
+Ejemplo:
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char origen[] = "Hola Mundo";
+    char destino[20];
+
+    strncpy(destino, origen, 4);
+    destino[4] = '\0'; // Agregar fin de cadena
+    printf("Destino: %s\n", destino);
+    return 0;
+}
+
+
+
+------------------------------------------------------------------------------------------
+strcat()
+
+Descripción: Concatena (une) dos cadenas.
+
+Prototipo:
+
+char *strcat(char *dest, const char *src);
+
+
+Ejemplo:
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char texto[50] = "Hola";
+    strcat(texto, " Mundo");
+    printf("%s\n", texto);
+    return 0;
+}
+
+------------------------------------------------------------------------------------------
+
+strncat()
+
+Descripción: Concatena los primeros n caracteres de una cadena.
+
+Prototipo:
+
+char *strncat(char *dest, const char *src, size_t n);
+
+
+Ejemplo:
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char texto[50] = "Hola";
+    char mundo[] = "Mundial";
+    strncat(texto, mundo, 3);
+    printf("%s\n", texto); // Resultado: HolaMun
+    return 0;
+}
+
+
+
+------------------------------------------------------------------------------------------
+strchr()
+
+Descripción: Busca la primera aparición de un carácter en una cadena.
+
+Prototipo:
+
+char *strchr(const char *str, int c);
+
+
+Ejemplo:
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char texto[] = "Programacion";
+    char *ptr = strchr(texto, 'a');
+    if (ptr)
+        printf("Primera 'a' en la posición: %ld\n", ptr - texto);
+    return 0;
+}
+
+------------------------------------------------------------------------------------------
+
+strrchr()
+
+Descripción: Busca la última aparición de un carácter en una cadena.
+
+Prototipo:
+
+char *strrchr(const char *str, int c);
+
+
+Ejemplo:
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char texto[] = "banana";
+    char *ptr = strrchr(texto, 'a');
+    if (ptr)
+        printf("Última 'a' en la posición: %ld\n", ptr - texto);
+    return 0;
+}
+
+------------------------------------------------------------------------------------------
+9. strncat()
+
+Descripción: Concatena los primeros n caracteres de una cadena.
+
+Prototipo:
+
+char *strncat(char *dest, const char *src, size_t n);
+
+
+Ejemplo:
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char texto[50] = "Hola";
+    char mundo[] = "Mundial";
+    strncat(texto, mundo, 3);
+    printf("%s\n", texto); // Resultado: HolaMun
+    return 0;
+}
+
+
+------------------------------------------------------------------------------------------
+
+10. strstr()
+
+Descripción: Busca la primera ocurrencia de una subcadena dentro de otra.
+
+Prototipo:
+
+char *strstr(const char *str1, const char *str2);
+
+
+------------------------------------------------------------------------------------------
+
+11. sprintf()
+
+Descripción: Escribe texto formateado en una cadena (similar a printf, pero en lugar de imprimir en pantalla, escribe en un string).
+
+Librería: <stdio.h>
+
+Prototipo:
+
+int sprintf(char *str, const char *format, ...);
+
+
+Parámetros:
+
+str: Puntero al arreglo de caracteres donde se guardará el resultado.
+
+format: Cadena de formato (igual que en printf, puede incluir %d, %s, %f, etc.).
+
+...: Lista de argumentos que se insertarán en el formato
+
+
+------------------------------------------------------------------------------------------
+
+
+strcspn()
+
+Descripción: Calcula la longitud del segmento inicial de una cadena (str1) que no contiene ninguno de los caracteres especificados en otra cadena (str2).
+
+Librería: <string.h>
+
+Prototipo:
+
+size_t strcspn(const char *str1, const char *str2);
+
+
+Parámetros:
+
+str1: Cadena en la que se busca.
+
+str2: Cadena que contiene los caracteres prohibidos (los que detendrán el conteo).
+
+Retorna:
+
+El número de caracteres iniciales de str1 antes de encontrar cualquiera de los caracteres presentes en str2.
+
+Ejemplo:
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char texto[] = "programacion en C";
+    char separadores[] = " ";
+    
+    size_t pos = strcspn(texto, separadores);
+    printf("Primera palabra tiene %zu letras\n", pos);
+
+    return 0;
+}
+
+
+Salida:
+
+Primera palabra tiene 12 letras
+
+------------------------------------------------------------------------------------------
