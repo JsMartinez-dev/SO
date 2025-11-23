@@ -4,11 +4,5 @@ int main(){
     int suma = num2+1;
     printf("suma es:"+suma);
 
-
-
-
-
-
-
     return 0;
 }

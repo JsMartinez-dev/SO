@@ -5,6 +5,7 @@
 #include <sys/types.h> 
 #include <sys/wait.h> 
 #include <unistd.h>
+#include <pthread.h>    // Incluye las funciones y tipos para hilos POSIX
 
 #include <stdio.h>  -> Agrega las funciones de entrada y salida printf(), scanf(), fopen(), fclose(), fgets().
 #include <string.h> -> Sirve para mainupal cadenas de texto strlen(), strcpy(), strcmp(), memcpy(), memset().
