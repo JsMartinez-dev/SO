@@ -1,0 +1,5 @@
+4
+M|T|N;vm-34mn;sa-east-1;FAIL;41;HOST_DOWN
+M|T|N;vm-12uv;sa-east-1;FAIL;50;MEMORY_LEAK
+M|T|N;vm-89ij;eu-west-2;FAIL;33;DISK_FULL
+M|T|N;vm-12kl;eu-west-2;FAIL;19;SERVICE_CRASHEDs

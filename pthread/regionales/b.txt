@@ -1,0 +1,4 @@
+3
+M|T|N;vm-67gh;eu-west-2;FAIL;55;CPU_OVERLOAD
+M|T|N;vm-56op;sa-east-1;FAIL;62;NETWORK_TIMEOUT
+M|T|N;vm-11be;us-east-1;FAIL;12;DISK_SLOW

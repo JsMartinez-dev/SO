@@ -110,6 +110,8 @@ void* jacobi_relax(void* args){
             pthread_cond_signal(&cond);
         }
 
+
+        
         if(c == n_days){
             should_exit = 1;
             pthread_cond_signal(&cond);

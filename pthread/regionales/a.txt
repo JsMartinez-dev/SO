@@ -1,0 +1,8 @@
+5
+M|T|N;vm-00af;us-east-1;FAIL;37;HOST_DOWN
+M|T|N;vm-45ef;eu-west-2;FAIL;28;MEMORY_LEAK
+M|T|N;vm-23cd;us-east-1;FAIL;45;NETWORK_TIMEOUT
+M|T|N;vm-11be;us-east-1;FAIL;12;DISK_SLOW
+M|T|N;vm-90st;sa-east-1;FAIL;27;CPU_OVERLOAD
+
+
