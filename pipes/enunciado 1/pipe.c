@@ -16,7 +16,7 @@ int main(){
     char buffer[100];
     
     if(pipe(fd)==-1){
-        error("Pipe no creado");
+        error("Pipe no creado, error");
     }
     
 
