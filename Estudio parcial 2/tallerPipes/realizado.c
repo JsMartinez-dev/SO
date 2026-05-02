@@ -11,7 +11,7 @@
     }
 
     int main(){
-        
+        //Esto es un acambio en la rama feature/user
         int NHijos,i,j,k;
         char *smg = (char *)  malloc( 100 * sizeof(char));
         char *buf = (char *)  malloc( 100 * sizeof(char));
